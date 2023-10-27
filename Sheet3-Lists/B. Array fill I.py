@@ -1,8 +1,10 @@
-n = eval(input("Enter a number:"))
-a = []
-a.append(n)
-print("N[" , 0 , "] = " , a[0] , sep="")
-for i in range (1,10):
-    x = a[i-1] * 2
-    a.append(x)
-    print("N[" , i , "] = " , a[i] , sep="")
+# Prompt user for number between 1 and 50 inclusive
+num = eval(input("Enter start point: "))
+while num < 1 or num > 50:
+    num = int(input("Enter start point: "))
+N = []
+
+# Multiply the number by 2 to the power of its index and print list
+for i in range(10):
+    N.append(num * 2 ** i)
+    print("N[", i, "] = ", N[i], sep = '')
